@@ -127,7 +127,7 @@
        
         </div>
         <div class="header__video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/doL90LFIZqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="youtube-video" class="border" width="560" height="315" src="https://www.youtube.com/embed/doL90LFIZqc" enablejsapi="1" frameborder="0" allowfullscreen></iframe>
 
        
         </div>
@@ -670,7 +670,23 @@
     <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
     <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
+<script>
+  var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('youtube-video',
+  {
+    videoId:'doL90LFIZqc',
+    playerVars: {rel: 0, showinfo: 0, ecver: 2},
+   
+  });
+}
+
+</script>
     <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>

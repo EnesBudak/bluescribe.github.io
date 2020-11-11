@@ -3233,6 +3233,15 @@ dark green:#28b485
     left: 50%;
     transform: translate(25%, 25%);
     text-align: center;
+    
+
+    
+  }
+  border{
+    border-top: 3px solid #EEE;
+    border-right: 3px solid #EEE;
+    border-left: 3px solid #EEE;
+
   }
   .header__logo {
     height: 35px;
@@ -3276,6 +3285,27 @@ dark green:#28b485
     animation: moveInRight 1s ease-out;
   }
 
+  @media screen and (max-width: 1024px) {
+   .header__video iframe{
+       display: none;
+   }
+   .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  }
+  @media screen and (max-width:650px){
+    .btn:link,
+    .btn:visited {
+   
+      
+      margin:5px;
+      
+    }
+  }
   @keyframes moveInLeft {
     0% {
       opacity: 0;
