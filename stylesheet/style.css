@@ -33,6 +33,7 @@
 
 /* Reset
 -------------------------------------------------------------- */
+
 html {
 overflow-y: scroll;
 -webkit-text-size-adjust: 100%;
@@ -3195,3 +3196,137 @@ input::-webkit-input-placeholder {
     background: -o-linear-gradient(left, rgba(117,38,215,1) 0%, rgba(242,105,253,1) 100%);
     background: linear-gradient(to right, rgba(117,38,215,1) 0%, rgba(242,105,253,1) 100%);
 }
+
+/* 
+light green: #7ed56f
+medium green:#55c57a
+dark green:#28b485
+ */
+
+
+  .headerr {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, #d56fcca2, #b428a8d0),
+      url(../images/transparent-head/01.png);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  
+  .header__text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    text-align: center;
+  }
+  .header__video{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(25%, 25%);
+    text-align: center;
+  }
+  .header__logo {
+    height: 35px;
+  }
+  
+  .heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-top: 60px;
+    
+  }
+  .heading-secondary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+  }
+  .heading-primary--main {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+  }
+  .heading-primary--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: moveInRight 1s ease-out;
+  }
+  .heading-primary--detail {
+    display: block;
+    font-size: 20px;
+    font-weight: 200;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: moveInRight 1s ease-out;
+  }
+
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    60% {
+      transform: rotate(120deg);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  .btn:link,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn--white {
+    background-color: #fff;
+    color: #777;
+  }
+  
